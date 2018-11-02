@@ -53,6 +53,7 @@ function update() {
     }
 
     // lemon logo
+    console.log(timespan);
     byId("counterOverview").innerHTML = timespan.months;
     if (timespan.months == 1) {
         byId("monthUnit").innerHTML = "month";
@@ -62,39 +63,67 @@ function update() {
         byId("counterUnit").innerHTML = "months";
     }
     if (timespan.months == 0) {
-        byId("counterOverview").innerHTML = timespan.weeks;
+        byId("counterOverview").innerHTML = timespan.weeks + " " + timespan.days;
         if (timespan.weeks == 1) {
-            byId("counterUnit").innerHTML = "week";
+            byId("counterUnit").innerHTML = "week, ";
         } else {
-            byId("counterUnit").innerHTML = "weeks";
+            byId("counterUnit").innerHTML = "weeks, ";
         }
-    } else if (timespan.weeks == 0) {
-        byId("counterOverview").innerHTML = timespan.days;
         if (timespan.days == 1) {
-            byId("counterUnit").innerHTML = "day";
+            byId("counterUnit").innerHTML += "day";
         } else {
-            byId("counterUnit").innerHTML = "days";
+            byId("counterUnit").innerHTML += "days";
         }
-    } else if (timespan.days == 0) {
-        byId("counterOverview").innerHTML = timespan.hours;
-        if (timespan.hours == 1) {
-            byId("counterUnit").innerHTML = "hour";
-        } else {
-            byId("counterUnit").innerHTML = "hours";
-        }
-    } else if (timespan.hours == 0) {
-        byId("counterOverview").innerHTML = timespan.minutes;
-        if (timespan.minutes == 1) {
-            byId("counterUnit").innerHTML = "minute";
-        } else {
-            byId("counterUnit").innerHTML = "minutes";
-        }
-    } else if (timespan.minutes == 0) {
-        byId("counterOverview").innerHTML = timespan.seconds;
-        if (timespan.seconds == 1) {
-            byId("counterUnit").innerHTML = "second";
-        } else {
-            byId("counterUnit").innerHTML = "seconds";
+
+        if (timespan.weeks == 0) {
+            byId("counterOverview").innerHTML = timespan.days + " " + timespan.hours;
+            if (timespan.days == 1) {
+                byId("counterUnit").innerHTML = "day, ";
+            } else {
+                byId("counterUnit").innerHTML = "days, ";
+            }
+            if (timespan.hours == 1) {
+                byId("counterUnit").innerHTML += "hour";
+            } else {
+                byId("counterUnit").innerHTML += "hours";
+            }
+
+            if (timespan.days == 0) {
+                byId("counterOverview").innerHTML = timespan.hours + " " + timespan.minutes;
+                if (timespan.hours == 1) {
+                    byId("counterUnit").innerHTML = "hour, ";
+                } else {
+                    byId("counterUnit").innerHTML = "hours, ";
+                }
+                if (timespan.minutes == 1) {
+                    byId("counterUnit").innerHTML += "minute";
+                } else {
+                    byId("counterUnit").innerHTML += "minutes";
+                }
+
+                if (timespan.hours == 0) {
+                    byId("counterOverview").innerHTML = timespan.minutes + " " + timespan.seconds;
+                    if (timespan.minutes == 1) {
+                        byId("counterUnit").innerHTML = "minute, ";
+                    } else {
+                        byId("counterUnit").innerHTML = "minutes, ";
+                    }
+                    if (timespan.seconds == 1) {
+                        byId("counterUnit").innerHTML += "second";
+                    } else {
+                        byId("counterUnit").innerHTML += "seconds";
+                    }
+
+                    if (timespan.minutes == 0) {
+                        byId("counterOverview").innerHTML = timespan.seconds;
+                        if (timespan.seconds == 1) {
+                            byId("counterUnit").innerHTML = "second";
+                        } else {
+                            byId("counterUnit").innerHTML = "seconds";
+                        }
+                    }
+                }
+            }
         }
     }
 

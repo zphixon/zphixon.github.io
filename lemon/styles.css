@@ -11,7 +11,7 @@ body{
     background-image: linear-gradient(to bottom, #666 0%, #999 100%);
     background-repeat:no-repeat;
     background-attachment:fixed;
-	font-family:sans-serif;
+    font-family:sans-serif;
 }
 h1{
     font-style:normal;
@@ -59,8 +59,9 @@ h1{
     right:194px;
 }
 #counterOverview{
-    font-size:256px;
-    margin:10px 0px -360px 0px;
+    /*font-size:256px;*/
+    font-size:10em;
+    margin:75px 0px -360px 0px;
     text-align:center;
     position:relative;
     bottom:400px;
@@ -80,7 +81,7 @@ h1{
     font-size:50px;
     position:relative;
     margin-left:10px;
-    margin-top:80px;
+    margin-top:100px;
     text-align:center;
 }
 .detailUnit{
