@@ -1,0 +1,78 @@
+body {
+    font-family: Sans-Serif;
+    /*padding-top: 40px;
+    padding-left: 30px;*/
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:active {
+    color: red;
+}
+
+#logo {
+    max-width: 800px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div {
+    text-align: center;
+}
+
+#msg {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+#msg.fade {
+    opacity: 1;
+}
+
+#login {
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+#login.fade {
+    opacity: 0;
+    cursor: not-allowed;
+}
+
+.btn {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    /*text-align: center;*/
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.btn1 {
+    border-radius: 6px;
+    background-color: white;
+    color: black;
+    border: 2px solid #364867;
+}
+
+.btn1:hover {
+    background-color: #364867;
+    color: white;
+}
+

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+        <link rel="shortcut icon" type="image/png" href="favicon3.png">
+        <link rel="stylesheet" href="index.css">
+        <title>Syndicate</title>
+    </head>
+    <body onload="onLoad()">
+        <img id="logo" src="syndicate.svg">
+        <div>
+            <button id="login" class="btn btn1">Log in</button>
+            <p id="msg">Welcome, member. We've been expecting you.<br>Your agent will be in contact with you shortly.</p>
+        </div>
+        <!-- machine page background: #404040 -->
+    </body>
+    <script type="text/javascript">
+        var login = document.getElementById("login");
+        var msg = document.getElementById("msg");
+
+        function onLoad() {
+            console.log(document.cookie);
+            console.log("chungus");
+            if (document.cookie.includes("syndicate")) {
+                login.parentNode.removeChild(login);
+                msg.classList.toggle("fade");
+            }
+        }
+        login.onclick = function() {
+            if (!login.classList.contains("fade")) {
+                login.classList.toggle("fade");
+            }
+            setTimeout(function(){login.parentNode.removeChild(login);}, 200);
+            setTimeout(function(){msg.classList.toggle("fade");}, 200);
+            document.cookie = "syndicate=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+        };
+    </script>
+</html>
+
