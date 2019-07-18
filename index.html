@@ -31,15 +31,31 @@
       <link rel="stylesheet" href="index.css">
       <meta charset="UTF-8">
   </head>
-  <body>
+  <body onload="setcolor()">
+    <script>
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+    function setcolor() {
+        var letters = "abcdefg";
+        for (var i = 0; i < 7; i++) {
+            document.getElementById(letters[i]).style.color = getRandomColor();
+        }
+    }
+    </script>
     <h1>
-        <span>c</span>
-        <span>h</span>
-        <span>e</span>
-        <span>e</span>
-        <span>z</span>
-        <span>g</span>
-        <span>i</span>
+        <span id="a">c</span>
+        <span id="b">h</span>
+        <span id="c">e</span>
+        <span id="d">e</span>
+        <span id="e">z</span>
+        <span id="f">g</span>
+        <span id="g">i</span>
       <!---<span style="color: red">w</span>
       <span style="color: orange">h</span>
       <span style="color: #f7f700">o</span>
