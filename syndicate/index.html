@@ -32,7 +32,8 @@
             }
             setTimeout(function(){login.parentNode.removeChild(login);}, 200);
             setTimeout(function(){msg.classList.toggle("fade");}, 200);
-            document.cookie = "syndicate=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+            // secure cookie requires https
+            document.cookie = "syndicate=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=None; Secure";
         };
     </script>
 </html>
