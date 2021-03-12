@@ -1,0 +1,27 @@
+td {
+  padding: 10px;
+}
+
+.green {
+  background-color: #40ac40;
+  color: white;
+}
+
+.red {
+  background-color: #da2222;
+  color: white;
+}
+
+.blue {
+  background-color: #47d4e2;
+}
+
+button {
+  border: none;
+  padding: 7px 15px;
+  font-family: serif;
+}
+
+button:active {
+  transform: translateX(1px) translateY(1px);
+}

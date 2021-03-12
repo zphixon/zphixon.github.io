@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+  <!--                  *****
+                   *****     ***
+                ***   *****     ***
+              **     *     *       ***
+            ******    *****           ***
+            *     *******                ***
+            *            *******            ***
+            *                   ******         ***
+            *  ****     *****         ******      **
+            * *    *   *     *              *********
+            * *    *    *    *     ****              *
+            *  ****      ****     *    *             *
+            *              ****   *     *            *
+            *             *    *   *****           ***
+            *             *    *         ***      *
+            *****          ****         *   *     *
+                 *****                  *    *     **
+                      ******             ****        *
+                            ******                   *
+                                  ******             *
+                                        *****        *
+                                             *****   *
+                                                  ****         -->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <title>zphixon</title>
+      <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+      <link rel="stylesheet" href="index.css">
+      <meta charset="UTF-8">
+  </head>
+  <body onload="setcolor()">
+    <script>
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+    function setcolor() {
+        var letters = "abcdefg";
+        for (var i = 0; i < 7; i++) {
+            document.getElementById(letters[i]).style.color = getRandomColor();
+        }
+    }
+    </script>
+    <h1>
+        <span id="a">z</span>
+        <span id="b">p</span>
+        <span id="c">h</span>
+        <span id="d">i</span>
+        <span id="e">x</span>
+        <span id="f">o</span>
+        <span id="g">n</span>
+      <!---<span style="color: red">w</span>
+      <span style="color: orange">h</span>
+      <span style="color: #f7f700">o</span>
+      <span style="color: green">o</span>
+      <span style="color: blue">p</span>
+      <span style="color: purple">s</span>-->
+      <!--<span style="color: #EA0282">c</span>
+      <span style="color: #EA0282">h</span>
+      <span style="color: #EA0282">e</span>
+      <span style="color: #9B4F96">e</span>
+      <span style="color: #0038A8">z</span>
+      <span style="color: #0038A8">g</span>
+      <span style="color: #0038A8">i</span>-->
+      <!--<span style="color: purple">c</span>
+      <span style="color: blue">h</span>
+      <span style="color: green">e</span>
+      <span style="color: #f7f700">e</span>
+      <span style="color: orange">z</span>
+      <span style="color: red">g</span>
+      <span style="color: purple">i</span>-->
+    </h1>
+    <p style="padding-left: 40px;">
+      Hi! My name is Zack. I'm a programmer, and I make stuff.
+    </p>
+    <p style="padding-left: 40px;">
+      Here's some stuff I made (mostly Rust):<br>
+    </p>
+    <ul style="padding-left: 75px;">
+      <li>nccl: non-crap config language</li>
+      <li>asteroid: small game framework</li>
+      <li>piccolo: lightweight, high-pitched scripting language</li>
+      <li>juggle: stack-based esoteric programming langauge</li>
+    </ul>
+    <p style="padding-left: 40px;">
+      Links:
+    </p>
+    <ul style="padding-left: 75px;">
+      <li><a href="http://zphixon.com/lemon">lemon tuesday</a></li>
+      <li><a href="https://github.com/zphixon">my github</a></li>
+      <li><a href="https://gitlab.com/cheezgi">my gitlab</a></li>
+    </ul>
+  </body>
+</html>

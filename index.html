@@ -1,101 +1,68 @@
 <!DOCTYPE html>
-
 <html>
-  <!--                  *****
-                   *****     ***
-                ***   *****     ***
-              **     *     *       ***
-            ******    *****           ***
-            *     *******                ***
-            *            *******            ***
-            *                   ******         ***
-            *  ****     *****         ******      **
-            * *    *   *     *              *********
-            * *    *    *    *     ****              *
-            *  ****      ****     *    *             *
-            *              ****   *     *            *
-            *             *    *   *****           ***
-            *             *    *         ***      *
-            *****          ****         *   *     *
-                 *****                  *    *     **
-                      ******             ****        *
-                            ******                   *
-                                  ******             *
-                                        *****        *
-                                             *****   *
-                                                  ****         -->
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-      <title>zphixon</title>
-      <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
-      <link rel="stylesheet" href="index.css">
-      <meta charset="UTF-8">
+    <meta charset=utf8>
+    <link rel=stylesheet href=style.css>
+    <link rel="shortcut icon" type="image/png" href=untitled.png>
+    <title>Zack Hixon</title>
   </head>
-  <body onload="setcolor()">
-    <script>
-    function getRandomColor() {
-      var letters = '0123456789ABCDEF';
-      var color = '#';
-      for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-      }
-      return color;
-    }
-    function setcolor() {
-        var letters = "abcdefg";
-        for (var i = 0; i < 7; i++) {
-            document.getElementById(letters[i]).style.color = getRandomColor();
-        }
-    }
+  <body>
+    <br>
+
+    <div class=container>
+      <div class="flex center">
+        <img class=circle width=100% src=pfp.jpg>
+      </div>
+      <span class=flex style=flex-basis:40%>
+        <h1>Hi!</h1>
+        <p>My name is Zack, and I'm a CS student at Kennesaw State.</p>
+      </span>
+      <div class="flex center">
+        <img class=circle width=100% src=red_toy_small.png>
+      </div>
+    </div>
+
+    <div class=container>
+      <span class=flex>
+        <h3>About me</h3>
+        <p class=item>I've had a lifelong fascination for all things computing. It all started in 5th grade when
+        I saw the cool things that people would make by modding Minecraft, and I wanted to get in on
+        the action. I googled "how to make minecraft mods" and here I am, <span id=years></span> years
+        later, well on my way to a BS in Computer Science with a minor in Software Engineering.</p>
+      </span>
+      <span class=flex>
+        <h3>Links</h3>
+        <a class=item href="old_index/index.html"><img src=favicons/mysite.png> Old version of this page</a><br>
+        <a class=item href="https://twitter.com/cheezgi"><img src=favicons/twitter.png> Twitter</a><br>
+        <a class=item href="https://github.com/zphixon"><img src=favicons/github.png> GitHub profile</a><br>
+        <a class=item href="https://www.instagram.com/zphixon/"><img src=favicons/insta.png> Instagram</a><br>
+        <a class=item href="https://www.ravelry.com/people/zphixon"><img src=favicons/ravelry.png> Ravelry</a><br>
+        <!--<a class=item href="resume.pdf"><img src=favicons/resume.png> Resume (pdf)</a><br>-->
+      </span>
+    </div>
+    <div class=container>
+      <span class=flex>
+        <h3>Portfolio</h3>
+        <i class=item style=line-height:24px>nccl</i>: configuration language library<br>
+        <i class=item style=line-height:24px>froggi</i>: barebones networking protocol<br>
+        <i class=item style=line-height:24px>piccolo</i>: simple scripting language<br>
+        <i class=item style=line-height:24px>planck-zh</i>: custom keyboard layout<br>
+        <i class=item style=line-height:24px>archiver</i>: spotify play history archive
+      </span>
+      <span class=flex>
+        <h3>Fun tidbits</h3>
+        <ul>
+          <li>I have multiple crochet projects including winterwear, blankets, hoodies (that's me wearing one), and amigurumi</li>
+          <li>I've scored 24994 out of 25000 on Geoguessr without the use of Google or Wikipedia</li>
+          <li>My typing speed average is 90 WPM on both QWERTY and Colemak keyboard layouts</li>
+          <li>Some of my code has been stored in an arctic vault as part of the GitHub Archive Program</li>
+        </ul>
+      </span>
+    </div>
+
+    <script type=text/javascript>
+      let years = new Date(new Date() - new Date('2009/08/05')).getFullYear() - 1970;
+      document.getElementById('years').innerHTML = years + 'ish';
     </script>
-    <h1>
-        <span id="a">z</span>
-        <span id="b">p</span>
-        <span id="c">h</span>
-        <span id="d">i</span>
-        <span id="e">x</span>
-        <span id="f">o</span>
-        <span id="g">n</span>
-      <!---<span style="color: red">w</span>
-      <span style="color: orange">h</span>
-      <span style="color: #f7f700">o</span>
-      <span style="color: green">o</span>
-      <span style="color: blue">p</span>
-      <span style="color: purple">s</span>-->
-      <!--<span style="color: #EA0282">c</span>
-      <span style="color: #EA0282">h</span>
-      <span style="color: #EA0282">e</span>
-      <span style="color: #9B4F96">e</span>
-      <span style="color: #0038A8">z</span>
-      <span style="color: #0038A8">g</span>
-      <span style="color: #0038A8">i</span>-->
-      <!--<span style="color: purple">c</span>
-      <span style="color: blue">h</span>
-      <span style="color: green">e</span>
-      <span style="color: #f7f700">e</span>
-      <span style="color: orange">z</span>
-      <span style="color: red">g</span>
-      <span style="color: purple">i</span>-->
-    </h1>
-    <p style="padding-left: 40px;">
-      Hi! My name is Zack. I'm a programmer, and I make stuff.
-    </p>
-    <p style="padding-left: 40px;">
-      Here's some stuff I made (mostly Rust):<br>
-    </p>
-    <ul style="padding-left: 75px;">
-      <li>nccl: non-crap config language</li>
-      <li>asteroid: small game framework</li>
-      <li>piccolo: lightweight, high-pitched scripting language</li>
-      <li>juggle: stack-based esoteric programming langauge</li>
-    </ul>
-    <p style="padding-left: 40px;">
-      Links:
-    </p>
-    <ul style="padding-left: 75px;">
-      <li><a href="http://zphixon.com/lemon">lemon tuesday</a></li>
-      <li><a href="https://github.com/zphixon">my github</a></li>
-      <li><a href="https://gitlab.com/cheezgi">my gitlab</a></li>
-    </ul>
   </body>
 </html>
