@@ -14,12 +14,15 @@
 .item {
   padding-left: 5px;
 }
+.darker {
+  color: #3d463d;
+}
 body {
   max-width: 850px;
   margin: 0 auto;
   float: none;
-  background-color: #f3f3f3;
-  color: #707070;
+  background-color: #fbfbf0;
+  color: #565f56;
   font-family: Noto Serif, serif;
 }
 a:visited {
@@ -33,3 +36,4 @@ a:link {
 .circle {
   border-radius: 50%;
 }
+
