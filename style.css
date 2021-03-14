@@ -27,7 +27,7 @@ a:link {
   padding: 3px 10px 7px 10px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .container {
     flex-direction: column;
   }
