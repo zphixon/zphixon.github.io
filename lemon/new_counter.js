@@ -28,6 +28,8 @@ function findDate(year) {
 
 var updatedCounterImg = false;
 
+const useNew = true;
+
 function update() {
     // CURRENT_YEAR
     var year = new Date().getFullYear();
@@ -52,113 +54,233 @@ function update() {
         return;
     }
 
-    // lemon logo
-    console.log(timespan);
-    byId("counterOverview").innerHTML = timespan.months;
-    if (timespan.months == 1) {
-        byId("monthUnit").innerHTML = "month";
-        byId("counterUnit").innerHTML = "month";
-    } else {
-        byId("monthUnit").innerHTML = "months";
-        byId("counterUnit").innerHTML = "months";
-    }
-    if (timespan.months == 0) {
-        byId("counterOverview").innerHTML = timespan.weeks + " " + timespan.days;
-        if (timespan.weeks == 1) {
-            byId("counterUnit").innerHTML = "week, ";
+    if (useNew) {
+        // lemon logo
+        console.log(timespan);
+        byId("counterOverview").innerHTML = timespan.months;
+        if (timespan.months == 1) {
+            byId("monthUnit").innerHTML = "month";
+            byId("counterUnit").innerHTML = "month";
         } else {
-            byId("counterUnit").innerHTML = "weeks, ";
+            byId("monthUnit").innerHTML = "months";
+            byId("counterUnit").innerHTML = "months";
         }
-        if (timespan.days == 1) {
-            byId("counterUnit").innerHTML += "day";
-        } else {
-            byId("counterUnit").innerHTML += "days";
-        }
-
-        if (timespan.weeks == 0) {
-            byId("counterOverview").innerHTML = timespan.days + " " + timespan.hours;
-            if (timespan.days == 1) {
-                byId("counterUnit").innerHTML = "day, ";
+        if (timespan.months == 0) {
+            byId("counterOverview").innerHTML = timespan.weeks;
+            if (timespan.weeks == 1) {
+                byId("counterUnit").innerHTML = "week";
             } else {
-                byId("counterUnit").innerHTML = "days, ";
-            }
-            if (timespan.hours == 1) {
-                byId("counterUnit").innerHTML += "hour";
-            } else {
-                byId("counterUnit").innerHTML += "hours";
+                byId("counterUnit").innerHTML = "weeks";
             }
 
-            if (timespan.days == 0) {
-                byId("counterOverview").innerHTML = timespan.hours + " " + timespan.minutes;
-                if (timespan.hours == 1) {
-                    byId("counterUnit").innerHTML = "hour, ";
+            if (timespan.weeks == 0) {
+                byId("counterOverview").innerHTML = timespan.days;
+                if (timespan.days == 1) {
+                    byId("counterUnit").innerHTML = "day";
                 } else {
-                    byId("counterUnit").innerHTML = "hours, ";
-                }
-                if (timespan.minutes == 1) {
-                    byId("counterUnit").innerHTML += "minute";
-                } else {
-                    byId("counterUnit").innerHTML += "minutes";
+                    byId("counterUnit").innerHTML = "days";
                 }
 
-                if (timespan.hours == 0) {
-                    byId("counterOverview").innerHTML = timespan.minutes + " " + timespan.seconds;
-                    if (timespan.minutes == 1) {
-                        byId("counterUnit").innerHTML = "minute, ";
+                if (timespan.days == 0) {
+                    byId("counterOverview").innerHTML = timespan.hours;
+                    if (timespan.hours == 1) {
+                        byId("counterUnit").innerHTML = "hour";
                     } else {
-                        byId("counterUnit").innerHTML = "minutes, ";
-                    }
-                    if (timespan.seconds == 1) {
-                        byId("counterUnit").innerHTML += "second";
-                    } else {
-                        byId("counterUnit").innerHTML += "seconds";
+                        byId("counterUnit").innerHTML = "hours";
                     }
 
-                    if (timespan.minutes == 0) {
-                        byId("counterOverview").innerHTML = timespan.seconds;
-                        if (timespan.seconds == 1) {
-                            byId("counterUnit").innerHTML = "second";
+                    if (timespan.hours == 0) {
+                        byId("counterOverview").innerHTML = timespan.minutes;
+                        if (timespan.minutes == 1) {
+                            byId("counterUnit").innerHTML = "minute";
                         } else {
-                            byId("counterUnit").innerHTML = "seconds";
+                            byId("counterUnit").innerHTML = "minutes";
+                        }
+
+                        if (timespan.minutes == 0) {
+                            byId("counterOverview").innerHTML = timespan.seconds;
+                            if (timespan.seconds == 1) {
+                                byId("counterUnit").innerHTML = "second";
+                            } else {
+                                byId("counterUnit").innerHTML = "seconds";
+                            }
                         }
                     }
                 }
             }
         }
+
+        // actual counter
+        if (timespan.months == 1) {
+            byId("months").innerHTML = "1";
+            byId("monthUnit").innerHTML = "month";
+        } else if (timespan.months >= 2) {
+            byId("months").innerHTML = timespan.months;
+            byId("monthUnit").innerHTML = "months";
+        } else {
+            byId("months").innerHTML = "";
+            byId("monthUnit").innerHTML = "";
+        }
+
+        if (timespan.weeks == 1) {
+            byId("weeks").innerHTML = "1";
+            byId("weekUnit").innerHTML = "week";
+        } else if (timespan.weeks >= 2) {
+            byId("weeks").innerHTML = timespan.weeks;
+            byId("weekUnit").innerHTML = "weeks";
+        } else {
+            byId("weeks").innerHTML = "";
+            byId("weekUnit").innerHTML = "";
+        }
+
+        if (timespan.days == 1) {
+            byId("days").innerHTML = "1";
+            byId("dayUnit").innerHTML = "day";
+        } else if (timespan.days >= 2) {
+            byId("days").innerHTML = timespan.days;
+            byId("dayUnit").innerHTML = "days";
+        } else {
+            byId("days").innerHTML = "";
+            byId("dayUnit").innerHTML = "";
+        }
+
+        if (timespan.hours == 1) {
+            byId("hours").innerHTML = "1";
+            byId("hourUnit").innerHTML = "hour";
+        } else if (timespan.hours >= 2) {
+            byId("hours").innerHTML = timespan.hours;
+            byId("hourUnit").innerHTML = "hours";
+        } else {
+            byId("hours").innerHTML = "";
+            byId("hourUnit").innerHTML = "";
+        }
+
+        if (timespan.minutes == 1) {
+            byId("minutes").innerHTML = "1";
+            byId("minuteUnit").innerHTML = "minute";
+        } else if (timespan.minutes >= 2) {
+            byId("minutes").innerHTML = timespan.minutes;
+            byId("minuteUnit").innerHTML = "minutes";
+        } else {
+            byId("minutes").innerHTML = "";
+            byId("minuteUnit").innerHTML = "";
+        }
+
+        byId("seconds").innerHTML = timespan.seconds;
+        if (timespan.seconds == 1)
+            byId("secondUnit").innerHTML = "second";
+        else
+            byId("secondUnit").innerHTML = "seconds";
+    } else {
+
+        // lemon logo
+        console.log(timespan);
+        byId("counterOverview").innerHTML = timespan.months;
+        if (timespan.months == 1) {
+            byId("monthUnit").innerHTML = "month";
+            byId("counterUnit").innerHTML = "month";
+        } else {
+            byId("monthUnit").innerHTML = "months";
+            byId("counterUnit").innerHTML = "months";
+        }
+        if (timespan.months == 0) {
+            byId("counterOverview").innerHTML = timespan.weeks + " " + timespan.days;
+            if (timespan.weeks == 1) {
+                byId("counterUnit").innerHTML = "week, ";
+            } else {
+                byId("counterUnit").innerHTML = "weeks, ";
+            }
+            if (timespan.days == 1) {
+                byId("counterUnit").innerHTML += "day";
+            } else {
+                byId("counterUnit").innerHTML += "days";
+            }
+
+            if (timespan.weeks == 0) {
+                byId("counterOverview").innerHTML = timespan.days + " " + timespan.hours;
+                if (timespan.days == 1) {
+                    byId("counterUnit").innerHTML = "day, ";
+                } else {
+                    byId("counterUnit").innerHTML = "days, ";
+                }
+                if (timespan.hours == 1) {
+                    byId("counterUnit").innerHTML += "hour";
+                } else {
+                    byId("counterUnit").innerHTML += "hours";
+                }
+
+                if (timespan.days == 0) {
+                    byId("counterOverview").innerHTML = timespan.hours + " " + timespan.minutes;
+                    if (timespan.hours == 1) {
+                        byId("counterUnit").innerHTML = "hour, ";
+                    } else {
+                        byId("counterUnit").innerHTML = "hours, ";
+                    }
+                    if (timespan.minutes == 1) {
+                        byId("counterUnit").innerHTML += "minute";
+                    } else {
+                        byId("counterUnit").innerHTML += "minutes";
+                    }
+
+                    if (timespan.hours == 0) {
+                        byId("counterOverview").innerHTML = timespan.minutes + " " + timespan.seconds;
+                        if (timespan.minutes == 1) {
+                            byId("counterUnit").innerHTML = "minute, ";
+                        } else {
+                            byId("counterUnit").innerHTML = "minutes, ";
+                        }
+                        if (timespan.seconds == 1) {
+                            byId("counterUnit").innerHTML += "second";
+                        } else {
+                            byId("counterUnit").innerHTML += "seconds";
+                        }
+
+                        if (timespan.minutes == 0) {
+                            byId("counterOverview").innerHTML = timespan.seconds;
+                            if (timespan.seconds == 1) {
+                                byId("counterUnit").innerHTML = "second";
+                            } else {
+                                byId("counterUnit").innerHTML = "seconds";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // actual counter
+        byId("months").innerHTML = timespan.months;
+        byId("weeks").innerHTML = timespan.weeks;
+        byId("days").innerHTML = timespan.days;
+        byId("hours").innerHTML = timespan.hours;
+        byId("minutes").innerHTML = timespan.minutes;
+        byId("seconds").innerHTML = timespan.seconds;
+
+        if (timespan.weeks == 1)
+            byId("weekUnit").innerHTML = "week";
+        else
+            byId("weekUnit").innerHTML = "weeks";
+
+        if (timespan.days == 1)
+            byId("dayUnit").innerHTML = "day";
+        else
+            byId("dayUnit").innerHTML = "days";
+
+        if (timespan.hours == 1)
+            byId("hourUnit").innerHTML = "hour";
+        else
+            byId("hourUnit").innerHTML = "hours";
+
+        if (timespan.minutes == 1)
+            byId("minuteUnit").innerHTML = "minute";
+        else
+            byId("minuteUnit").innerHTML = "minutes";
+
+        if (timespan.seconds == 1)
+            byId("secondUnit").innerHTML = "second";
+        else
+            byId("secondUnit").innerHTML = "seconds";
     }
-
-    // actual counter
-    byId("months").innerHTML = timespan.months;
-    byId("weeks").innerHTML = timespan.weeks;
-    byId("days").innerHTML = timespan.days;
-    byId("hours").innerHTML = timespan.hours;
-    byId("minutes").innerHTML = timespan.minutes;
-    byId("seconds").innerHTML = timespan.seconds;
-
-    if (timespan.weeks == 1)
-        byId("weekUnit").innerHTML = "week";
-    else
-        byId("weekUnit").innerHTML = "weeks";
-
-    if (timespan.days == 1)
-        byId("dayUnit").innerHTML = "day";
-    else
-        byId("dayUnit").innerHTML = "days";
-
-    if (timespan.hours == 1)
-        byId("hourUnit").innerHTML = "hour";
-    else
-        byId("hourUnit").innerHTML = "hours";
-
-    if (timespan.minutes == 1)
-        byId("minuteUnit").innerHTML = "minute";
-    else
-        byId("minuteUnit").innerHTML = "minutes";
-
-    if (timespan.seconds == 1)
-        byId("secondUnit").innerHTML = "second";
-    else
-        byId("secondUnit").innerHTML = "seconds";
 
     if (!updatedCounterImg) {
         byId("counterIcon").src = "img/counter-" + (12 - timespan.months) + ".png";
