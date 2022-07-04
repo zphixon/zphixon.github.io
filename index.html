@@ -26,7 +26,7 @@
     <div class=container>
       <span class=flex>
         <h3 class=darker>About me</h3>
-        <p class=item>I've had a lifelong fascination for all things computing. It all started in 5th grade when
+        <p class=item id=about>I've had a lifelong fascination for all things computing. It all started in 5th grade when
         I saw the cool things that people would make by modding Minecraft, and I wanted to get in on
         the action. I googled "how to make minecraft mods" and here I am, <span id=years></span> years
         later, with a B.S. Computer Science and a minor in Software Engineering.</p>
@@ -59,7 +59,10 @@
 
     <script type=text/javascript>
       let years = new Date(new Date() - new Date('2012/08/05')).getFullYear() - 1970;
-      document.getElementById('years').innerHTML = years + 'ish';
+      document.getElementById('years').innerHTML = years + 'ish';'
+      if (navigator.userAgent.indexOf('SerenityOS') != -1) {
+        document.getElementById('about').innerHTML += ' :)';
+      }
     </script>
   </body>
 </html>
