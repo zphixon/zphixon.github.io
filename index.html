@@ -29,7 +29,7 @@
   <body>
     <div class="container candy-card candy-texture-striped" id="header">
       <div class="flex center">
-        <img class="circle" width="100%" src="smallnewnewphoto.jpg">
+        <img id="face" class="circle" width="100%" src="smallnewnewphoto.jpg">
       </div>
       <div class="flex wide">
         <h1>Hi!</h1>
@@ -97,6 +97,7 @@
     <script type="text/javascript">
       let years = new Date(new Date() - new Date('2012/08/05')).getFullYear() - 1970;
       document.getElementById('years').innerHTML = years + 'ish';
+
       if (navigator.userAgent.indexOf('SerenityOS') != -1) {
         document.getElementById('about').innerHTML += ' :^)';
       }
@@ -119,6 +120,23 @@
       let randomCardWells = document.querySelectorAll('.random-card-well');
       for (let el of randomCardWells) {
         el.classList.add(cardWell[Math.floor(Math.random() * cardWell.length)]);
+      }
+
+      // zero-indexed months. fucking genius
+      let months = new Map();
+      months.set(2, [17, 'stpatricks.jpg']);
+      months.set(3, [22, 'earthday.jpg']);
+
+      months.set(11, [32, 'newyears.jpg']);
+      months.set(0, [1, 'newyears.jpg']);
+      months.set(1, [14, 'valentines.jpg']);
+
+      let now = new Date();
+      if (months.has(now.getMonth())) {
+        let [day, newSrc] = months.get(now.getMonth());
+        if (day - 1 <= now.getDate() && now.getDate() <= day + 1) {
+          document.getElementById('face').src = newSrc;
+        }
       }
     </script>
   </body>
