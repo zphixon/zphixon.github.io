@@ -8,45 +8,51 @@
     <title>Zack Hixon</title>
   </head>
   <body>
-    <br>
-
     <div class="container" id="header">
       <div class="flex center">
         <img class="circle" width="100%" src="newnewphoto.jpg">
       </div>
-      <span class="flex" style="flex-basis:40%;" id="hi">
+      <div class="flex wide">
         <h1 class="darker">Hi!</h1>
-        <p>My name is Zack, and I'm a Software Engineer at <a href="https://stonebranch.com">Stonebranch, Inc.</a></p>
-      </span>
-      <div class="flex center">
+        <p>
+          My name is Zack, and I'm a Software Engineer at
+          <a href="https://stonebranch.com">Stonebranch, Inc.</a>
+        </p>
+      </div>
+      <div class="flex center" id="hb">
         <img class="circle" width="100%" src="hb.jpg">
       </div>
     </div>
 
     <div class="container">
-      <span class="flex">
+      <div class="flex space-around first nudge-right">
         <h3 class="darker">About me</h3>
-        <p class="item" id="about">I've had a lifelong fascination for all things computing. It all started in 5th grade when
+        <p class="inset" id="about">I've had a lifelong fascination for all things computing. It all started in 5th grade when
         I saw the cool things that people would make by modding Minecraft, and I wanted to get in on
         the action. I googled "how to make minecraft mods" and here I am, <span id="years"></span> years
         later, with a B.S. Computer Science and a minor in Software Engineering.</p>
-      </span>
-      <span class="flex">
+      </div>
+      <div class="flex space-around last nudge-right">
         <h3 class="darker">Links</h3>
-        <a class="item" href="old_index/index.html"><img src="favicons/mysite.png"> Old version of this page</a><br>
-        <a class="item" href="https://github.com/zphixon"><img src="favicons/github.png"> GitHub profile</a><br>
-        <a class="item" href="https://linkedin.com/in/zphixon"><img src="favicons/linkedin.png""> LinkedIn</a><br>
-        <a class="item" href="https://www.ravelry.com/people/zphixon"><img src="favicons/ravelry.png"> Ravelry</a><br>
-      </span>
+        <ul>
+          <li class="inset"><a href="old_index/index.html"><img src="favicons/mysite.png"> Old version of this page</a></li>
+          <li class="inset"><a href="https://github.com/zphixon"><img src="favicons/github.png"> GitHub profile</a></li>
+          <li class="inset"><a href="https://linkedin.com/in/zphixon"><img src="favicons/linkedin.png""> LinkedIn</a></li>
+          <li class="inset"><a href="https://www.ravelry.com/people/zphixon"><img src="favicons/ravelry.png"> Ravelry</a></li>
+        </ul>
+      </div>
     </div>
+
     <div class="container">
-      <span class="flex">
+      <div class="flex space-around first nudge-right">
         <h3 class="darker">Portfolio</h3>
-        <i class="item" style="line-height:24px;"><a href="https://github.com/zphixon/nccl">nccl</a></i>: configuration language library<br>
-        <i class="item" style="line-height:24px;"><a href="https://github.com/zphixon/piccolo">piccolo</a></i>: bytecode-compiled scripting language<br>
-        <i class="item" style="line-height:24px;"><a href="https://github.com/zphixon/stones">stones</a></i>: esoteric programming language<br>
-      </span>
-      <span class="flex">
+        <ul>
+          <li class="inset"><i><a href="https://github.com/zphixon/nccl">nccl</a></i>: configuration language library</li>
+          <li class="inset"><i><a href="https://github.com/zphixon/piccolo">piccolo</a></i>: bytecode-compiled scripting language</li>
+          <li class="inset"><i><a href="https://github.com/zphixon/stones">stones</a></i>: esoteric programming language</li>
+        </ul>
+      </div>
+      <div class="flex space-around last nudge-right">
         <h3 class="darker">Fun tidbits</h3>
         <ul>
           <li>I have multiple crochet projects including winterwear, blankets, hoodies, and amigurumi</li>
@@ -54,7 +60,7 @@
           <li>My typing speed average is 100 WPM on both QWERTY and Colemak keyboard layouts</li>
           <li>Some of my code has been stored in an arctic vault as part of the GitHub Archive Program</li>
         </ul>
-      </span>
+      </div>
     </div>
 
     <script type="text/javascript">
