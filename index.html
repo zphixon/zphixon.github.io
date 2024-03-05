@@ -27,7 +27,7 @@
     </style>
   </head>
   <body>
-    <div class="container candy-card" id="header">
+    <div class="container candy-card candy-texture-striped" id="header">
       <div class="flex center">
         <img class="circle" width="100%" src="newnewphoto.jpg">
       </div>
@@ -44,26 +44,38 @@
     </div>
 
     <div class="container">
-      <div class="flex space-around first nudge-right candy-well">
+      <div class="flex space-around first nudge-right random-texture random-card-well">
         <h3>About me</h3>
         <p class="inset" id="about">I've had a lifelong fascination for all things computing. It all started in 5th grade when
         I saw the cool things that people would make by modding Minecraft, and I wanted to get in on
         the action. I googled "how to make minecraft mods" and here I am, <span id="years"></span> years
         later, with a B.S. Computer Science and a minor in Software Engineering.</p>
       </div>
-      <div class="flex space-around last nudge-right candy-well">
+      <div class="flex space-around last nudge-right random-texture random-card-well">
         <h3>Links</h3>
         <ul>
-          <li class="inset"><a class="candy-link" href="old_index/index.html"><img src="favicons/mysite.png"> Old version of this page</a></li>
-          <li class="inset"><a class="candy-link" href="https://github.com/zphixon"><img src="favicons/github.png"> GitHub profile</a></li>
-          <li class="inset"><a class="candy-link" href="https://linkedin.com/in/zphixon"><img src="favicons/linkedin.png""> LinkedIn</a></li>
-          <li class="inset"><a class="candy-link" href="https://www.ravelry.com/people/zphixon"><img src="favicons/ravelry.png"> Ravelry</a></li>
+          <li class="inset">
+            <a href="old_index/index.html"><img src="favicons/mysite.png"></a>
+            <a class="candy-link" href="old_index/index.html">Old version of this page</a>
+          </li>
+          <li class="inset">
+            <a href="https://github.com/zphixon"><img src="favicons/github.png"></a>
+            <a class="candy-link" href="https://github.com/zphixon">GitHub profile</a>
+          </li>
+          <li class="inset">
+            <a href="https://linkedin.com/in/zphixon"><img src="favicons/linkedin.png""></a>
+            <a class="candy-link" href="https://linkedin.com/in/zphixon">LinkedIn</a>
+          </li>
+          <li class="inset">
+            <a href="https://www.ravelry.com/people/zphixon"><img src="favicons/ravelry.png"></a>
+            <a class="candy-link" href="https://www.ravelry.com/people/zphixon">Ravelry</a>
+          </li>
         </ul>
       </div>
     </div>
 
     <div class="container">
-      <div class="flex space-around first nudge-right candy-well">
+      <div class="flex space-around first nudge-right random-texture random-card-well">
         <h3>Portfolio</h3>
         <ul>
           <li class="inset"><i><a class="candy-link" href="https://github.com/zphixon/nccl">nccl</a></i>: configuration language library</li>
@@ -71,13 +83,13 @@
           <li class="inset"><i><a class="candy-link" href="https://github.com/zphixon/stones">stones</a></i>: esoteric programming language</li>
         </ul>
       </div>
-      <div class="flex space-around last nudge-right candy-well">
+      <div class="flex space-around last nudge-right random-texture random-card-well">
         <h3>Fun tidbits</h3>
         <ul>
           <li>I have multiple crochet projects including winterwear, blankets, hoodies, and amigurumi</li>
           <li>I have a perfect score on Geoguessr without the use of Google or Wikipedia</li>
           <li>My typing speed average is 100 WPM on both QWERTY and Colemak keyboard layouts</li>
-          <li>Some of my code has been stored in an arctic vault as part of the GitHub Archive Program</li>
+          <li class="short-li">Some of my code has been stored in an arctic vault as part of the GitHub Archive Program</li>
         </ul>
       </div>
     </div>
@@ -87,6 +99,26 @@
       document.getElementById('years').innerHTML = years + 'ish';
       if (navigator.userAgent.indexOf('SerenityOS') != -1) {
         document.getElementById('about').innerHTML += ' :^)';
+      }
+
+      let textures = [
+        //'candy-texture-striped',
+        'candy-texture-convex',
+        'candy-texture-concave',
+        'candy-texture-glossy',
+        'candy-texture-paper',
+        'candy-texture-smoooth',
+        'candy-texture-default',
+      ];
+      let randomTextures = document.querySelectorAll('.random-texture');
+      for (let el of randomTextures) {
+        el.classList.add(textures[Math.floor(Math.random() * textures.length)]);
+      }
+
+      let cardWell = ['candy-card', 'candy-well'];
+      let randomCardWells = document.querySelectorAll('.random-card-well');
+      for (let el of randomCardWells) {
+        el.classList.add(cardWell[Math.floor(Math.random() * cardWell.length)]);
       }
     </script>
   </body>
