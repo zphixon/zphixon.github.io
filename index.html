@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset=utf8>
+    <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=stylesheet href=style.css>
-    <link rel="shortcut icon" type="image/png" href=untitled.png>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="untitled.png">
     <title>Zack Hixon</title>
   </head>
   <body>
     <br>
 
-    <div class=container id=header>
+    <div class="container" id="header">
       <div class="flex center">
-        <img class=circle width=100% src=newnewphoto.jpg>
+        <img class="circle" width="100%" src="newnewphoto.jpg">
       </div>
-      <span class=flex style=flex-basis:40% id=hi>
-        <h1 class=darker>Hi!</h1>
-        <p>My name is Zack, and I'm a Software Engineer at <a href=https://stonebranch.com>Stonebranch, Inc.</a></p>
+      <span class="flex" style="flex-basis:40%;" id="hi">
+        <h1 class="darker">Hi!</h1>
+        <p>My name is Zack, and I'm a Software Engineer at <a href="https://stonebranch.com">Stonebranch, Inc.</a></p>
       </span>
       <div class="flex center">
-        <img class=circle width=100% src=hb.jpg>
+        <img class="circle" width="100%" src="hb.jpg">
       </div>
     </div>
 
-    <div class=container>
-      <span class=flex>
-        <h3 class=darker>About me</h3>
-        <p class=item id=about>I've had a lifelong fascination for all things computing. It all started in 5th grade when
+    <div class="container">
+      <span class="flex">
+        <h3 class="darker">About me</h3>
+        <p class="item" id="about">I've had a lifelong fascination for all things computing. It all started in 5th grade when
         I saw the cool things that people would make by modding Minecraft, and I wanted to get in on
-        the action. I googled "how to make minecraft mods" and here I am, <span id=years></span> years
+        the action. I googled "how to make minecraft mods" and here I am, <span id="years"></span> years
         later, with a B.S. Computer Science and a minor in Software Engineering.</p>
       </span>
-      <span class=flex>
-        <h3 class=darker>Links</h3>
-        <a class=item href="old_index/index.html"><img src=favicons/mysite.png> Old version of this page</a><br>
-        <a class=item href="https://github.com/zphixon"><img src=favicons/github.png> GitHub profile</a><br>
-        <a class=item href="https://linkedin.com/in/zphixon"><img src=favicons/linkedin.png> LinkedIn</a><br>
-        <a class=item href="https://www.ravelry.com/people/zphixon"><img src=favicons/ravelry.png> Ravelry</a><br>
+      <span class="flex">
+        <h3 class="darker">Links</h3>
+        <a class="item" href="old_index/index.html"><img src="favicons/mysite.png"> Old version of this page</a><br>
+        <a class="item" href="https://github.com/zphixon"><img src="favicons/github.png"> GitHub profile</a><br>
+        <a class="item" href="https://linkedin.com/in/zphixon"><img src="favicons/linkedin.png""> LinkedIn</a><br>
+        <a class="item" href="https://www.ravelry.com/people/zphixon"><img src="favicons/ravelry.png"> Ravelry</a><br>
       </span>
     </div>
-    <div class=container>
-      <span class=flex>
-        <h3 class=darker>Portfolio</h3>
-        <i class=item style=line-height:24px><a href="https://github.com/zphixon/nccl">nccl</a></i>: configuration language library<br>
-        <i class=item style=line-height:24px><a href="https://github.com/zphixon/piccolo">piccolo</a></i>: bytecode-compiled scripting language<br>
-        <i class=item style=line-height:24px><a href="https://github.com/zphixon/stones">stones</a></i>: esoteric programming language<br>
+    <div class="container">
+      <span class="flex">
+        <h3 class="darker">Portfolio</h3>
+        <i class="item" style="line-height:24px;"><a href="https://github.com/zphixon/nccl">nccl</a></i>: configuration language library<br>
+        <i class="item" style="line-height:24px;"><a href="https://github.com/zphixon/piccolo">piccolo</a></i>: bytecode-compiled scripting language<br>
+        <i class="item" style="line-height:24px;"><a href="https://github.com/zphixon/stones">stones</a></i>: esoteric programming language<br>
       </span>
-      <span class=flex>
-        <h3 class=darker>Fun tidbits</h3>
+      <span class="flex">
+        <h3 class="darker">Fun tidbits</h3>
         <ul>
           <li>I have multiple crochet projects including winterwear, blankets, hoodies, and amigurumi</li>
           <li>I have a perfect score on Geoguessr without the use of Google or Wikipedia</li>
@@ -57,7 +57,7 @@
       </span>
     </div>
 
-    <script type=text/javascript>
+    <script type="text/javascript">
       let years = new Date(new Date() - new Date('2012/08/05')).getFullYear() - 1970;
       document.getElementById('years').innerHTML = years + 'ish';
       if (navigator.userAgent.indexOf('SerenityOS') != -1) {
