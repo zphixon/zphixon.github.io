@@ -1,22 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html class="candy-root candy-scroll">
   <head>
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="candy.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="untitled.png">
     <title>Zack Hixon</title>
+    <style>
+      .candy-root {
+        --candy-color-background1: hsl(10 50% 10%);
+        --candy-color-background2: hsl(110 50% 20%);
+        --candy-color-background3: hsl(110 50% 17%);
+        --candy-color-background4: hsl(110 35% 14%);
+        --candy-color-text1: hsl(40 100% 97%);
+        --candy-color-text2: hsl(66 50% 80%);
+        --candy-color-border1: hsl(110 50% 45%);
+        --candy-color-border2: hsl(110 50% 26%);
+        --candy-color-border3: hsl(110 50% 29%);
+        --candy-color-accent-background1: hsl(85 80% 50%);
+        --candy-color-accent-background2: hsl(85 80% 45%);
+        --candy-color-accent-border1: hsl(85 80% 80%);
+        --candy-color-accent-text1: hsl(85 80% 5%);
+        --candy-color-shadow1: hsl(160 50% 5% / 50%);
+      }
+    </style>
   </head>
   <body>
-    <div class="container" id="header">
+    <div class="container candy-card" id="header">
       <div class="flex center">
         <img class="circle" width="100%" src="newnewphoto.jpg">
       </div>
       <div class="flex wide">
-        <h1 class="darker">Hi!</h1>
+        <h1>Hi!</h1>
         <p>
           My name is Zack, and I'm a Software Engineer at
-          <a href="https://stonebranch.com">Stonebranch, Inc.</a>
+          <a class="candy-link" href="https://stonebranch.com">Stonebranch, Inc.</a>
         </p>
       </div>
       <div class="flex center" id="hb">
@@ -25,35 +44,35 @@
     </div>
 
     <div class="container">
-      <div class="flex space-around first nudge-right">
-        <h3 class="darker">About me</h3>
+      <div class="flex space-around first nudge-right candy-well">
+        <h3>About me</h3>
         <p class="inset" id="about">I've had a lifelong fascination for all things computing. It all started in 5th grade when
         I saw the cool things that people would make by modding Minecraft, and I wanted to get in on
         the action. I googled "how to make minecraft mods" and here I am, <span id="years"></span> years
         later, with a B.S. Computer Science and a minor in Software Engineering.</p>
       </div>
-      <div class="flex space-around last nudge-right">
-        <h3 class="darker">Links</h3>
+      <div class="flex space-around last nudge-right candy-well">
+        <h3>Links</h3>
         <ul>
-          <li class="inset"><a href="old_index/index.html"><img src="favicons/mysite.png"> Old version of this page</a></li>
-          <li class="inset"><a href="https://github.com/zphixon"><img src="favicons/github.png"> GitHub profile</a></li>
-          <li class="inset"><a href="https://linkedin.com/in/zphixon"><img src="favicons/linkedin.png""> LinkedIn</a></li>
-          <li class="inset"><a href="https://www.ravelry.com/people/zphixon"><img src="favicons/ravelry.png"> Ravelry</a></li>
+          <li class="inset"><a class="candy-link" href="old_index/index.html"><img src="favicons/mysite.png"> Old version of this page</a></li>
+          <li class="inset"><a class="candy-link" href="https://github.com/zphixon"><img src="favicons/github.png"> GitHub profile</a></li>
+          <li class="inset"><a class="candy-link" href="https://linkedin.com/in/zphixon"><img src="favicons/linkedin.png""> LinkedIn</a></li>
+          <li class="inset"><a class="candy-link" href="https://www.ravelry.com/people/zphixon"><img src="favicons/ravelry.png"> Ravelry</a></li>
         </ul>
       </div>
     </div>
 
     <div class="container">
-      <div class="flex space-around first nudge-right">
-        <h3 class="darker">Portfolio</h3>
+      <div class="flex space-around first nudge-right candy-well">
+        <h3>Portfolio</h3>
         <ul>
-          <li class="inset"><i><a href="https://github.com/zphixon/nccl">nccl</a></i>: configuration language library</li>
-          <li class="inset"><i><a href="https://github.com/zphixon/piccolo">piccolo</a></i>: bytecode-compiled scripting language</li>
-          <li class="inset"><i><a href="https://github.com/zphixon/stones">stones</a></i>: esoteric programming language</li>
+          <li class="inset"><i><a class="candy-link" href="https://github.com/zphixon/nccl">nccl</a></i>: configuration language library</li>
+          <li class="inset"><i><a class="candy-link" href="https://github.com/zphixon/piccolo">piccolo</a></i>: bytecode-compiled scripting language</li>
+          <li class="inset"><i><a class="candy-link" href="https://github.com/zphixon/stones">stones</a></i>: esoteric programming language</li>
         </ul>
       </div>
-      <div class="flex space-around last nudge-right">
-        <h3 class="darker">Fun tidbits</h3>
+      <div class="flex space-around last nudge-right candy-well">
+        <h3>Fun tidbits</h3>
         <ul>
           <li>I have multiple crochet projects including winterwear, blankets, hoodies, and amigurumi</li>
           <li>I have a perfect score on Geoguessr without the use of Google or Wikipedia</li>
