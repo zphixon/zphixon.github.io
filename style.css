@@ -36,7 +36,7 @@ ul {
 #header {
   grid-column: span 2;
   display: grid;
-  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
   gap: 3em;
 }
 
@@ -54,13 +54,13 @@ ul {
   }
 
   #face {
-    max-height: 200px;
+    max-height: 10em;
     width: auto;
   }
 
   #header {
     grid-column: span 1;
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: 0.3fr 1fr;
   }
 }
