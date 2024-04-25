@@ -125,12 +125,13 @@
 
       // zero-indexed months. fucking jeanyus
       let months = new Map();
-      months.set(2, [17, 'stpatricks.jpg']);
-      months.set(3, [22, 'earthday.jpg']);
-
-      months.set(11, [32, 'newyears.jpg']);
       months.set(0, [1, 'newyears.jpg']);
       months.set(1, [14, 'valentines.jpg']);
+      months.set(2, [17, 'stpatricks.jpg']);
+      months.set(3, [22, 'earthday.jpg']);
+      months.set(4, [4, 'starwars.jpg']);
+
+      months.set(11, [32, 'newyears.jpg']);
 
       let now = new Date();
       if (months.has(now.getMonth())) {
