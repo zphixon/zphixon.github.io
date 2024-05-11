@@ -126,17 +126,38 @@
         el.classList.add(cardWell[Math.floor(Math.random() * cardWell.length)]);
       }
 
-      // zero-indexed months. fucking jeanyus
-      let months = new Map();
-      months.set(0, [1, 'newyears.jpg']);
-      months.set(1, [14, 'valentines.jpg']);
-      months.set(2, [17, 'stpatricks.jpg']);
-      months.set(3, [22, 'earthday.jpg']);
-      months.set(4, [4, 'starwars.jpg']);
-
-      months.set(11, [32, 'newyears.jpg']);
+      function summerSolsticeDay(year) {
+        // correct up to 2203 when it starts falling on the 22nd (and the 19th in 2488)
+        if ([
+          2024, 2028, 2032, 2036, 2040, 2041, 2044, 2045, 2048, 2049, 2052,
+          2053, 2056, 2057, 2060, 2061, 2064, 2065, 2068, 2069, 2070, 2072,
+          2073, 2074, 2076, 2077, 2078, 2080, 2081, 2082, 2084, 2085, 2086,
+          2088, 2089, 2090, 2092, 2093, 2094, 2096, 2097, 2098, 2099, 2128,
+          2132, 2136, 2140, 2144, 2148, 2152, 2156, 2160, 2161, 2164, 2165,
+          2168, 2169, 2172, 2173, 2176, 2177, 2180, 2181, 2184, 2185, 2188,
+          2189, 2190, 2192, 2193, 2194, 2196, 2197, 2198,
+        ].includes(year)) {
+          return 20;
+        } else {
+          return 21;
+        }
+      }
 
       let now = new Date();
+      let months = new Map();
+      months.set(0, [1, 'newyears.jpg']); // jan
+      months.set(1, [14, 'valentines.jpg']); // feb
+      months.set(2, [17, 'stpatricks.jpg']); // march
+      months.set(3, [22, 'earthday.jpg']); // april
+      months.set(4, [4, 'starwars.jpg']); // may
+      months.set(5, [summerSolsticeDay(now.getFullYear()), 'summersolstice.jpg']); // june
+      //months.set(6, [14, 'bastille.jpg']); // july
+      //months.set(7, [14, 'worldlizard.jpg']); // aug
+      //months.set(8, [12, 'bday.jpg']); // sep - labor day?
+      //months.set(9, [9, 'leiferikson.jpg']); // oct - halloween?
+      //months.set(10, [thanksgivingDay(now.getFullYear()), 'thanksgiving.jpg']); // nov
+      months.set(11, [32, 'newyears.jpg']); // dec
+
       if (months.has(now.getMonth())) {
         let [day, newSrc] = months.get(now.getMonth());
         if (day - 1 <= now.getDate() && now.getDate() <= day + 1) {
