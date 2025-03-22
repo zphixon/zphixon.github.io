@@ -33,7 +33,7 @@
     <div class="container">
       <div class="candy-card candy-texture-striped" id="header">
         <div>
-          <img id="face" class="circle" width="100%" src="smallnewnewphoto.jpg">
+          <img id="face" class="circle" width="100%" src="smallnewnewphoto.jpg" alt="my face">
         </div>
         <div>
           <h1>Hi!</h1>
@@ -101,7 +101,10 @@
       let years = new Date(new Date() - new Date('2012/08/05')).getFullYear() - 1970;
       document.getElementById('years').innerHTML = years + 'ish';
 
-      if (navigator.userAgent.indexOf('SerenityOS') != -1) {
+      if (
+        navigator.userAgent.indexOf('SerenityOS') != -1
+        || navigator.userAgent.indexOf('Ladybird') != -1
+      ) {
         document.getElementById('about').innerHTML += ' :^)';
       }
 
@@ -142,6 +145,12 @@
         }
       }
 
+      function thanksgivingDay(year) {
+        // https://forum.freecodecamp.org/t/how-to-calculate-when-is-thanks-giving-day-in-javascript/247187/3
+        let lastDayOfNov = new Date(year, 10, 30).getDay();
+        return (lastDayOfNov >= 4 ? 34 : 27) - lastDayOfNov;
+      }
+
       let now = new Date();
       let months = new Map();
       months.set(0, [1, 'newyears.jpg']); // jan
@@ -154,7 +163,7 @@
       months.set(7, [14, 'worldlizard.jpg']); // aug
       months.set(8, [12, 'bday.jpg']); // sep - labor day?
       months.set(9, [9, 'leiferikson.jpg']); // oct - halloween?
-      //months.set(10, [thanksgivingDay(now.getFullYear()), 'thanksgiving.jpg']); // nov
+      months.set(10, [thanksgivingDay(now.getFullYear()), 'thanksgiving.jpg']); // nov
       months.set(11, [32, 'newyears.jpg']); // dec
 
       if (months.has(now.getMonth())) {
